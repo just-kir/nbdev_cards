@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev_cards"
+  site-url: "https://just-kir.github.io/nbdev_cards"
+  description: "Deck of cards lib via nbdev"
+  repo-branch: main
+  repo-url: "https://github.com/just-kir/nbdev_cards"
