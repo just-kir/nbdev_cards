@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_cards",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "nbdev_cards"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev_cards",
+    "section": "Install",
+    "text": "Install\npip install nbdev_cards\nor\nconda install -c fastai nbdev_cards",
+    "crumbs": [
+      "nbdev_cards"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev_cards",
+    "section": "How to use",
+    "text": "How to use\nCard class that you can create, display and compare:\n\nCard(1, 3)\n\n3♥\n\n\nSuits are numbered according to the list:\n\nlist(suits)\n\n['♠', '♥', '♦', '♣']\n\n\nCompare cards:\n\nCard(rank=1, suit=2) &lt;  Card(rank=2, suit=2)\n\nTrue",
+    "crumbs": [
+      "nbdev_cards"
+    ]
+  },
+  {
+    "objectID": "deck.html",
+    "href": "deck.html",
+    "title": "deck",
+    "section": "",
+    "text": "source\n\nDeck\n\n Deck ()\n\nA deck of 52 cards.\nWhen we create a deck, all of the cards are present\n\ndeck = Deck()\ndeck\n\nA♠; A♥; A♦; A♣; 2♠; 2♥; 2♦; 2♣; 3♠; 3♥; 3♦; 3♣; 4♠; 4♥; 4♦; 4♣; 5♠; 5♥; 5♦; 5♣; 6♠; 6♥; 6♦; 6♣; 7♠; 7♥; 7♦; 7♣; 8♠; 8♥; 8♦; 8♣; 9♠; 9♥; 9♦; 9♣; 10♠; 10♥; 10♦; 10♣; J♠; J♥; J♦; J♣; Q♠; Q♥; Q♦; Q♣; K♠; K♥; K♦; K♣\n\n\n52 cards:\n\ntest_eq(len(deck), 52)\n\n\nsource\n\n\nDeck.pop\n\n Deck.pop (idx:int=-1)\n\nRemove top card from the deck\n\ndeck = Deck()\ntest_eq(deck.pop(), Card(3, 13))\n\n\nsource\n\n\nDeck.remove\n\n Deck.remove (card:nbdev_cards.card.Card)\n\nRemove a Card from the deck\n\ncard23 = Card(2, 3)\ndeck = Deck()\ndeck.remove(card23)\nassert card23 not in deck\n\n\nsource\n\n\nDeck.shuffle\n\n Deck.shuffle ()\n\nShuffle the deck.\n\nsource\n\n\ndraw_n\n\n draw_n (n:int, replace:bool=True)\n\nDraw n cards from the deck with replacement iif replace is True\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nn\nint\n\nnumber of cards to draw\n\n\nreplace\nbool\nTrue\nwhether to replace the drawn cards\n\n\nReturns\nlist\n\n\n\n\n\n\ndraw_n(5)\n\n[3♥, J♦, 8♦, 4♠, K♠]",
+    "crumbs": [
+      "deck"
+    ]
+  },
+  {
+    "objectID": "card.html",
+    "href": "card.html",
+    "title": "card – a basic playing card",
+    "section": "",
+    "text": "We will be using numbers to represent playing card suits and ranks. These are the ranks:\nranks\n\n[None, 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']\nAnd these are the suits:\nlist(suits)\n\n['♠', '♥', '♦', '♣']\nsource",
+    "crumbs": [
+      "card -- a basic playing card"
+    ]
+  },
+  {
+    "objectID": "card.html#comparison-operators",
+    "href": "card.html#comparison-operators",
+    "title": "card – a basic playing card",
+    "section": "Comparison operators",
+    "text": "Comparison operators\n\nsource\n\nCard.__eq__\n\n Card.__eq__ (other:__main__.Card)\n\nReturn self==value.\n\ntest_eq(Card(rank=1, suit=2), Card(rank=1, suit=2))\ntest_ne(Card(rank=1, suit=2), Card(rank=1, suit=3))\ntest_ne(Card(rank=1, suit=2), Card(rank=2, suit=2))\n\n\nsource\n\n\nCard.__lt__\n\n Card.__lt__ (other:__main__.Card)\n\nReturn self&lt;value.\n\nassert Card(rank=1, suit=2) &lt;  Card(rank=2, suit=2)\n\n\nsource\n\n\nCard.__gt__\n\n Card.__gt__ (other:__main__.Card)\n\nReturn self&gt;value.\n\nassert Card(suit=3, rank=4) &gt; Card(suit=2, rank=4)\nassert not Card(suit=2, rank=4) &gt; Card(suit=3, rank=4)",
+    "crumbs": [
+      "card -- a basic playing card"
+    ]
+  }
+]
